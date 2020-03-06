@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="Search.css">
+
+<body>
+  <!--Jumbotron-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">Domaining Tools</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="Permutator">Permutator</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="Search">Bulk Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Resources">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <div class="d-flex justify-content-center">
+    <div class="contentWrapper">
+      <h5 style="text-align: center;">Bulk Search Tools:</h5>
+      <table class="darkTable">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Max Search</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://www.dynadot.com/domain/bulk-search.html">Dynadot</a></td>
+            <td>cell2_1</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.name.com/names">Name.com</a></td>
+            <td>cell2_2</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.eurodns.com/bulk-search">EuroDNS</a></td>
+            <td>cell2_3</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.101domain.com/bulk_domain_search.htm">101domain</a></td>
+            <td>cell2_4</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.godaddy.com/domains/bulk-domain-search.aspx">GoDaddy</a></td>
+            <td>cell2_5</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="CorrectInfo">
+        *If this info is outdated or incorrect, please <a href="Contact">Contact Us</a>
+      </div>
+      <div class="AddToolForm">
+        <form>
+          <fieldset>
+            <!-- Text input-->
+            <label class="control-label" for="textinput">Know of a great bulk search tool? Tell us about it:</label>
+            <div class="d-flex">
+                <input id="textinput" name="textinput" type="text" placeholder="placeholder"
+                  class="form-control input-md">
+                <button id="singlebutton" name="singlebutton" class="btn btn-primary">Send!</button>
+        
+            </div>
+            <!-- Button -->
+            <div class="form-group">
+
+            </div>
+
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>

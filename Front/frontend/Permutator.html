@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- CSS  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!--Jumbotron-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Domaining Tools</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="Permutator">Permutator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Search">Bulk Search<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Resources">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="row" id="parts">
+                <div class="col-sm" id="1"> Part 1
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+                <div class="col-sm" id="2"> Part 2
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="col-sm" id="ext"> Extension
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+        </div>
+        <br>
+        <div class="row d-flex justify-content-between">
+            <button class="btn btn-primary" id="Run">Run</button>
+            <div>
+                <button class="btn btn-outline-success" id="AddPart">Add Part</button>
+                <button class="btn btn-outline-danger" id="RemovePart">Remove Part</button>
+            </div>
+        </div>
+        <br>
+
+        <div class="row resultsDiv" style="display:none">
+            <div class="row d-flex justify-content-between">
+                <p>Results:</p>
+                <button class="clp btn btn-primary" data-clipboard-target="#PermResTable">Copy to Clipboard</button>
+            </div>
+            <table class="table" id="PermResTable">
+                <thead class="thead-dark d-flex justify-content-between"></thead>
+                <tbody id="res_tbody">
+                </tbody>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
