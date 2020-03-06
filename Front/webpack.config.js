@@ -1,5 +1,7 @@
+//Not using merge, currently setup in a way that requires config and prod to both contain entire config
+//#Project for another day
+
 const path = require('path');
-const merge = require("webpack-merge");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
