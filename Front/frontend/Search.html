@@ -8,92 +8,120 @@
   <!-- CSS  -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="Search.css">
-
+  <link rel="stylesheet" href="Search.css" type="text/css">
+<!-- Hotjar Tracking Code for domainingtoolset.com -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:1724866,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+</head>
 <body>
-   <!--Jumbotron-->
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand">Domaining Toolset</a>
+  <!--Jumbotron-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Domaining Toolset</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="Permutator.html">Permutator</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="Search.html">Bulk Search<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Resources.html">Resources</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Contact.html">Contact</a>
-            </li>
-        </ul>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="Permutator.html">Permutator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="Search.html">Bulk Search<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Resources.html">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Contact.html">Contact</a>
+        </li>
+      </ul>
     </div>
-</nav>
-<br>
+  </nav>
+  <br>
   <div class="d-flex justify-content-center">
     <div class="contentWrapper">
-      <h5 style="text-align: center;">Bulk Search Tools:</h5>
+      <div class="d-flex flex-column align-items-center">
+        <h2>Bulk Domain Search Tools</h2>
+        <p>Comparison & Links</p>
+      </div>
+      <br>
       <table class="darkTable">
         <thead>
           <tr>
             <th>Tool</th>
             <th>Max Search</th>
+            <th>Whois</th>
+            <th>Download Results</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><a href="https://www.dynadot.com/domain/bulk-search.html">Dynadot</a></td>
-            <td>cell2_1</td>
-          </tr>
-          <tr>
             <td><a href="https://www.name.com/names">Name.com</a></td>
-            <td>cell2_2</td>
+            <td>Limit Unknown! >20K</td>
+            <td></td>
+            <td><span class="checkMark"> &#9989;</span></td>
           </tr>
           <tr>
-            <td><a href="https://www.eurodns.com/bulk-search">EuroDNS</a></td>
-            <td>cell2_3</td>
-          </tr>
-          <tr>
-            <td><a href="https://www.101domain.com/bulk_domain_search.htm">101domain</a></td>
-            <td>cell2_4</td>
+            <td><a href="https://www.dynadot.com/domain/bulk-search.html">Dynadot</a></td>
+            <td>1000</td>
+            <td>Link in Results</td>
+            <td></td>
           </tr>
           <tr>
             <td><a href="https://www.godaddy.com/domains/bulk-domain-search.aspx">GoDaddy</a></td>
-            <td>cell2_5</td>
+            <td>500</td>
+            <td></td>
+            <td></td>
           </tr>
+          <tr>
+            <td><a href="https://www.eurodns.com/bulk-search">EuroDNS</a></td>
+            <td>100</td>
+            <td>Link (uses reCAPTCHA)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.101domain.com/bulk_domain_search.htm">101domain</a></td>
+            <td>100</td>
+            <td></td>
+            <td></td>
+          </tr>
+
         </tbody>
       </table>
+      <br>
       <div class="CorrectInfo">
-        *If this info is outdated or incorrect, please <a href="Contact">Contact Us</a>
+        *If this info is outdated or incorrect, please <a href="Contact.html">Contact Us</a>
       </div>
       <div class="AddToolForm">
-        <form>
-          <fieldset>
             <!-- Text input-->
             <label class="control-label" for="textinput">Know of a great bulk search tool? Tell us about it:</label>
             <div class="d-flex">
-                <input id="textinput" name="textinput" type="text" placeholder="placeholder"
-                  class="form-control input-md">
-                <button id="singlebutton" name="singlebutton" class="btn btn-primary">Send!</button>
-        
+              <input id="textinput" name="textinput" type="text" placeholder="Something.com/DomainSearch"
+                class="form-control input-md">
+              <div id="submitArea">
+                <button id='submitBtn' class="btn btn-primary">
+                  <span class="spinner-border spinner-border-sm" style='display: none;'></span>
+                  <span>Send!</span>
+                </button>
+              </div>
             </div>
-            <!-- Button -->
-            <div class="form-group">
-
-            </div>
-
-          </fieldset>
-        </form>
       </div>
     </div>
   </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 

@@ -1,0 +1,22 @@
+service: domaining-toolset-backend
+app: domaining-toolset
+org: tronesde
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+iamRoleStatements:
+   - Effect: "Allow"
+     Action:
+       - SES:*
+     Resource: "*"
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+     - http:
+         path: contact/def
+         method: post
+         cors: true

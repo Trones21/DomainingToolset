@@ -1,7 +1,7 @@
 import { openDB, deleteDB, wrap, unwrap } from 'idb';
 import { xml2js } from 'xml-js';
 import { Parser } from 'json2csv';
-
+/*** My custom Bulk Search Tool ***/
 
 //DynaDot Simple API (v2) & Advanced API (v3)
 const basev2 = "https://api.dynadot.com/api2.html?key=";
@@ -26,10 +26,6 @@ UCModal.modal({
 //@ts-ignore
 UCModal.modal('show');
 
-
-function hasClass(element, cls) {
-    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-}
 
 function toggleErrorMsg(e) {
     let lbl = e.target.nextElementSibling;

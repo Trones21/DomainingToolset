@@ -5,33 +5,41 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: {
+    Index: './frontend/index.ts',
     Search: './frontend/SearchTools.ts',
     Permutator: './frontend/Permutator.ts',
     Contact: './frontend/Contact.ts',
   },
   plugins: [
     new HtmlWebpackPlugin({
+      includeChunks: ['Index'],
+      filename: 'index.html',
+      title: "Home",
+      template: './frontend/index.html'
+    }),
+    new HtmlWebpackPlugin({
       excludeChunks: ['Permutator'],
-      filename: 'Search',
+      filename: 'Search.html',
       title: "Bulk Search",
       template: './frontend/Search.html'
     }),
     new HtmlWebpackPlugin({
-      excludeChunks: ['Search'],
-      filename: 'Permutator',
+      includeChunks: ['Permutator'],
+      filename: 'Permutator.html',
       title: "Permutator",
       template: './frontend/Permutator.html'
     }),
     new HtmlWebpackPlugin({
       includeChunks: ['Contact'],
-      filename: 'Contact',
+      filename: 'Contact.html',
       title: "Contact",
       template: './frontend/Contact.html'
     }),
     new HtmlWebpackPlugin({
       includeChunks: ['Resources'],
-      filename: 'Resources',
+      filename: 'Resources.html',
       title: "Resources",
       template: './frontend/Resources.html'
     })
@@ -51,11 +59,16 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif)$/i,
         use: [
           'file-loader',
         ],
       },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+
     ],
   },
   resolve: {

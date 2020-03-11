@@ -8,11 +8,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
+        Index: './frontend/index.ts',
         Search: './frontend/SearchTools.ts',
         Permutator: './frontend/Permutator.ts',
         Contact: './frontend/Contact.ts',
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            includeChunks: ['Index'],
+            filename: 'index.html',
+            title: "Home",
+            template: './frontend/index.html'
+        }),
         new HtmlWebpackPlugin({
             excludeChunks: ['Permutator'],
             filename: 'Search.html',
@@ -20,7 +27,7 @@ module.exports = {
             template: './frontend/Search.html'
         }),
         new HtmlWebpackPlugin({
-            excludeChunks: ['Search'],
+            includeChunks: ['Permutator'],
             filename: 'Permutator.html',
             title: "Permutator",
             template: './frontend/Permutator.html'
@@ -57,6 +64,10 @@ module.exports = {
                 use: [
                     'file-loader',
                 ],
+            },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
             },
         ],
     },

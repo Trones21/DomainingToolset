@@ -47,3 +47,9 @@ table.darkTable {
   table.darkTable tfoot td {
     font-size: 12px;
   }
+
+  .checkMark{
+    color: green;
+    font-size:large;
+    font-weight: bolder;
+  }

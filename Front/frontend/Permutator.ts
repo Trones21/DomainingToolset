@@ -1,7 +1,24 @@
+const imgSrc = require('./img/permutations.png');
+
+const element = document.createElement('div');
+const example = new Image();
+example.src = imgSrc;
+element.appendChild(example);
+
 
 document.getElementById("Run")!.addEventListener("click", Run);
 document.getElementById("AddPart")!.addEventListener("click", AddPart);
 document.getElementById("RemovePart")!.addEventListener("click", RemovePart);
+
+/*Image Popup*/
+document.getElementById("imgToggler")!.addEventListener("mouseenter", () => {
+    let element = document.getElementById("showExample")!;
+    element!.setAttribute("style", `outline:grey solid 10px;
+    position:fixed; z-index:99; left:50%; top:20%; transform: translateX(-50%); background-color: grey;`)
+});
+document.getElementById("imgToggler")!.addEventListener("mouseleave", () => {
+    document.getElementById("showExample")!.setAttribute("style", "display: none;")
+})
 
 var clipboard = new ClipboardJS('.btn')
 clipboard.on("success", function (e) {
@@ -34,14 +51,10 @@ function Run() {
         inputArrays.push(singleArr)
     }
 
-    var Ext: string[] = (<HTMLInputElement>document.getElementById("ext")!.firstElementChild).value!.split('\n')
-        .map(line => line.trim().toLowerCase())
-        .filter(line => line.length > 0);
-    inputArrays.push(Ext)
-
     //Need to remove empty arrays
     var arraysToCombine = inputArrays.filter(a => a.length > 0);
 
+    //Combinate!
     var getAllCombinations = function (arraysToCombine) {
         var divisors: number[] = [];
         for (var i = arraysToCombine.length - 1; i >= 0; i--) {
@@ -91,16 +104,17 @@ function Run() {
 function AddPart() {
 
     var parent = document.getElementById("parts")!;
-    var partNum = parent.childElementCount + 1;
+    var partNum = parent.childElementCount;
     var outerDiv = document.createElement("div");
-    outerDiv.className = "col-sm";
+    outerDiv.className = "col-3";
     outerDiv.id = partNum.toString();
     outerDiv.innerText = "Part " + partNum.toString();
     var textArea = document.createElement("textarea");
     textArea.className = "form-control";
     textArea.setAttribute("rows", "3");
     outerDiv.appendChild(textArea);
-    parent.appendChild(outerDiv);
+    // parent.appendChild(outerDiv);
+    let insertedNode = parent.insertBefore(outerDiv, parent.lastElementChild)
 }
 
 function RemovePart() {
@@ -108,7 +122,7 @@ function RemovePart() {
     var partID = parent.childElementCount;
     var last = <HTMLElement>parent.lastElementChild
     var remove = <Node>last.previousElementSibling
-    parent.removeChild(last)
+    parent.removeChild(remove)
 }
 
 
